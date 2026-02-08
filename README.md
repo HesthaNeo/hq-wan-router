@@ -63,6 +63,8 @@
         <h3>Step 5: Configure and Connect Private WAN Interface G0/1</h3>
             <p>- Next we will configure and connect the private WAN interface.</p>
                 <img width="874" height="403" alt="Screenshot 2026-02-08 144842" src="https://github.com/user-attachments/assets/aefbee72-12bc-4b84-9ac0-a6b825611801" />
+            <p><em>- Using the "speed 100" command, we effectively set our speed to 100Mbps matching the ISP router interface. Command "bandwidth 50000" sets the bandwidth reference in kilobits (=50Mbps). We also want to ensure no cdp messages are sent to the provider network, so we execute "no cdp enable" command.</em></p>
+            <p>- Next, using an ethernet cross-over cable connect the private WAN interface G0/1 to the PRIVATE WAN CLOUD router interface FastEthernet0/0.</p>
 
             <p>- Next we will configure NAT for "INSIDE" ACL with Overload to interface G0/1.</p>
                 <img width="872" height="179" alt="Screenshot 2026-02-07 190203" src="https://github.com/user-attachments/assets/ef5afac0-4946-44e9-a52e-97e71c00a86e" />
