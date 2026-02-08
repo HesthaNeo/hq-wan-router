@@ -45,8 +45,8 @@
             <p>- First, we'll Add a 2901 Router to the topology by dragging and dropping it into the Headquarters section of the lab. We'll place the 2911 Router in the right side area of HQ and label it as “HQ-WAN-RTR”.</p>
                 <img width="1178" height="1001" alt="Screenshot 2026-02-08 141321" src="https://github.com/user-attachments/assets/c6363b3b-3940-4fda-a02f-ffe1e280f30f" />
         <h3>Step 2: Basic Switch Configurations (Hostname, NTP, Domain-Name, SSH, Etc)</h3>
-            <p>- In this step, we did basic configuration for both of the switches including changing their hostnames, setting their time zones, enabling SSH, setting domain names, adding securiting to console and vty lines for SSH, and creating user profiles with a password thedevices</p>
-                <img width="871" height="1002" alt="Screenshot 2026-02-07 174426" src="https://github.com/user-attachments/assets/b17c20ed-f02e-4dc9-8c0d-9b39391efbc5" />
+            <p>- In this step, we did basic configuration for both of the switches including changing their hostnames, setting their time zones, enabling SSH, setting domain names, adding securiting to console and vty lines for SSH, and creating user profiles with a password the devices</p>
+                <img width="871" height="980" alt="Screenshot 2026-02-08 141447" src="https://github.com/user-attachments/assets/e1ef04ae-0ddc-40c7-9f86-1b93f42bd98c" />
         <h3>Step 3: Install Securityk9 License</h3>
             <p>- Next we will activate the security licensing 60 day grace period on the 2901 Router. We do this to unlock advanced security features, primarily for setting up VPNs (IPsec), secure communication, and enhanced firewall functionality.</p>
                 <img width="874" height="939" alt="Screenshot 2026-02-07 180229" src="https://github.com/user-attachments/assets/252fd020-0fd3-470d-a065-6d02df2954ff" />
