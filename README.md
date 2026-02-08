@@ -83,8 +83,6 @@
             <p><em>- network 10.10.30.0 mask 255.255.255.0 <b>(Advertises B2 VOICE)</b></em></p>
             <p><em>- Our BGP verification config:</em></p>
                 <img width="2559" height="1599" alt="Screenshot 2026-02-08 152526" src="https://github.com/user-attachments/assets/0cb578e0-d2ea-48e1-913e-bc8fbc011de0" />
-
-
         <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
             <p>- Next we will configure the inside LAN interface G0/0 as a trunk for the Management and Data Networks, and connect the interface to the Core switched infrastructure.</p>
                 <p>- A: Configure the inside LAN interface.</p>
@@ -95,7 +93,8 @@
                 <img width="869" height="709" alt="Screenshot 2026-02-07 182703" src="https://github.com/user-attachments/assets/ca12f94f-bde6-4f7c-847a-2059ac43cfed" />
             <p><em>- Successful pings, showing we are able to establish connectivity to both the MGMT and DATA networks.</em></p>
         <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
-            <p>- Next, we will configure the internet facing interface.</p>
+            <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
+                <p>- A: We will start by configuring ISAMKP policy.</p>
                 <img width="870" height="432" alt="Screenshot 2026-02-08 130035" src="https://github.com/user-attachments/assets/8b792b4a-e833-4140-8de3-1956d1698130" />
             <p><em>- As you can see, we changed the speed of the g0/1 interface to match the speed interface with the ISP router. We also used the command "no cdp enable" to prevent sharing private network details with unauthorized parties. This will stop the router from broadcasting information such as IOS version, device type, and IP addresses to the Internet Service Provider (ISP) or attackers. We use the command "ip access-group PROTECT in" to apply the PROTECT ACL inbound that we created earlier. "inspect ip FIREWALL out applies the firewall inspection rules outbound. "ip nat outside" turns on network address translation for outbound traffic. And lasty we do a "no shut" on the interface to turn the interface in fact on.</em></p>
             <p>- Lastly, using an ethernet cross-over cable, we'll connect HQ-INET-RTR interface G0/1 to INTERNET CLOUD Service Provider router interface Fa0/0.</p>
