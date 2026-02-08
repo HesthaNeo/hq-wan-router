@@ -112,6 +112,8 @@
              <p><em>- Our currenty crypto map configuration.</em></p>
         <h3>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
             <p>- For this step, we will configure an Access Control List that only allows traffic from the Branch 2 IPSec VPN tunnel.</p>
+                 <img width="869" height="327" alt="Screenshot 2026-02-08 183232" src="https://github.com/user-attachments/assets/0e774fb4-53e8-4e2c-9648-653f806caf53" />
+
             <p><em>- The router now has a Default Route for unknown destinations (0.0.0.0 0.0.0.0).</em></p>
                 <p>- B: Now last, we will add all static routes.</p>
                 <img width="868" height="1068" alt="Screenshot 2026-02-08 132833" src="https://github.com/user-attachments/assets/d78b3025-2604-4972-9039-a4a9a79b836f" />
