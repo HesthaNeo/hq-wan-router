@@ -64,7 +64,7 @@
             <p>- Next we will configure and connect the private WAN interface.</p>
                 <img width="874" height="403" alt="Screenshot 2026-02-08 144842" src="https://github.com/user-attachments/assets/aefbee72-12bc-4b84-9ac0-a6b825611801" />
             <p><em>- Using the "speed 100" command, we effectively set our speed to 100Mbps matching the ISP router interface. Command "bandwidth 50000" sets the bandwidth reference in kilobits (=50Mbps). We also want to ensure no cdp messages are sent to the provider network, so we execute "no cdp enable" command.</em></p>
-            <p>- Next, using an ethernet cross-over cable connect the private WAN interface G0/1 to the PRIVATE WAN CLOUD router interface FastEthernet0/0.</p>
+            <p>- Next, using an ethernet cross-over cable, we'll connect the private WAN interface G0/1 to the PRIVATE WAN CLOUD router interface FastEthernet0/0.</p>
                 <img width="1183" height="973" alt="Screenshot 2026-02-08 145302" src="https://github.com/user-attachments/assets/fcffc9ed-34cd-4547-801e-b1d8086b47c5" />
                 <img width="868" height="433" alt="Screenshot 2026-02-08 145438" src="https://github.com/user-attachments/assets/2d17e92b-7753-44a4-8b2d-1650654cec1f" />
             <p><em>- As you can see, we are able to successfully ping the private WAN cloud router.</em></p>
