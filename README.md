@@ -58,6 +58,8 @@
                 <img width="872" height="650" alt="Screenshot 2026-02-08 142613" src="https://github.com/user-attachments/assets/7b7dbc3f-e745-47f7-9efc-b3b2187799dd" />
             <p><em>- Both MGMT and DATA VLAN interfaces were configured here as well.</em></p>
             <p>- Next, using a straight-through cable, we'll connect the LAN interface G0/0 to a trunk port on HQ-CORE-SW2 (i.e. FastEthernet0/20) and verify the port comes online.</p>
+                <img width="1175" height="1033" alt="Screenshot 2026-02-08 143240" src="https://github.com/user-attachments/assets/ccbd187c-d7c2-4623-9521-4f684993ebca" />
+                <img width="874" height="276" alt="Screenshot 2026-02-08 144551" src="https://github.com/user-attachments/assets/4acf6e07-0d13-4d12-a860-b2090fd1e128" />
         <h3>Step 5: Configure and Connect Private WAN Interface G0/1</h3>
             <p>- Next we will configure an access control list for translating all data and management networks, and also the HQ guest network.</p>
                 <img width="868" height="272" alt="Screenshot 2026-02-07 185904" src="https://github.com/user-attachments/assets/ea041f79-6b51-4cc8-967f-cd8b1b539e63" />
