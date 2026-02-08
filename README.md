@@ -37,9 +37,9 @@
         <p>- D. Apply VPN Crypto Map for Branch 2 VPN</p>
     <p><b>Step 11: Configure Static Routes</b></p>
         <p>- A. Default Route Pointing to HQ Internet Router DATA Interface IP Address</p>
-        <p>- B. Isakmp Policy</p>
-        <p>- C. Isakmp Key</p>
-        <p>- D. Ipsec SA Lifetime and Transform-Set</p>
+        <p>- B. Route to HQ Voice Network Pointing to HQ Core Switch Voice Network HSRP Address</p>
+        <p>- C. Route to Branch 2 Public IP Address via Internet Gateway Public IP</p>
+        <p>- D. Routes to Branch 2 Private Networks via Branch 2 Public IP</p>
     <h2><strong><u>Implementation</u></strong></h2>
         <h3>Step 1: Rack, Mount, and Power On The Cisco 2911 Router</h3>
             <p>- First, we'll Add a 2901 Router to the topology by dragging and dropping it into the Headquarters section of the lab. We'll place the 2901 Router in the top right area of HQ and label it as “HQ-INET-RTR”.</p>
