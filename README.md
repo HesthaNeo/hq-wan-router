@@ -81,6 +81,9 @@
             <p><em>- network 192.168.130.0 255.255.255.0 <b>(Advertises B2 MGMT)</b></em></p>
             <p><em>- network 192.168.30.0 mask 255.255.255.0 <b>(Advertises B2 DATA)</b></em></p>
             <p><em>- network 10.10.30.0 mask 255.255.255.0 <b>(Advertises B2 VOICE)</b></em></p>
+            <p><em>- Our BGP verification config:</em></p>
+                <img width="2559" height="1599" alt="Screenshot 2026-02-08 152526" src="https://github.com/user-attachments/assets/0cb578e0-d2ea-48e1-913e-bc8fbc011de0" />
+
 
         <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
             <p>- Next we will configure the inside LAN interface G0/0 as a trunk for the Management and Data Networks, and connect the interface to the Core switched infrastructure.</p>
