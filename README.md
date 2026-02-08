@@ -7,7 +7,9 @@
     <p><b>Step 1: Rack, Mount, and Power On The Cisco 2911 Router</b></p>
     <p><b>Step 2: Basic Switch Configurations (Hostname, NTP, Domain-Name, SSH, Etc)</b></p>
     <p><b>Step 3: Install Securityk9 License</b></p>
-    <p><b>Step 4: Configure Inbound Internet Access-List</b></p>
+    <p><b>Step 4: Configure and Connect HQ LAN Interface G0/0</b></p>
+        <p>- A. MGMT Interface VLAN 100</p>
+        <p>- B. DATA Interface VLAN 192</p>
     <p><b>Step 5: Configure NAT</b></p>
         <p>- A. NAT Inside Access-List</p>
         <p>- B. NAT Overload</p>
