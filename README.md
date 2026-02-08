@@ -114,7 +114,7 @@
             <p>- For this step, we will configure an Access Control List that only allows traffic from the Branch 2 IPSec VPN tunnel.</p>
                  <img width="869" height="327" alt="Screenshot 2026-02-08 183232" src="https://github.com/user-attachments/assets/0e774fb4-53e8-4e2c-9648-653f806caf53" />
              <p><em>- "permit udp host 50.50.50.50 any eq isakmp" is essentially allowing traffic using the udp protocol to host 50.50.50.50 from any of our internal devices using the VPN that are specifically using the UDP port 500, which is the standard port for negotiating VPN security keys.</em></p>
-             <p><em>- Our currenty crypto map configuration.</em></p>
+             <p><em>- "permit udp host 50.50.50.50 any eq non500-isakmp" is allowing traffic using the udp protocol to host 50.50.50.50 from any of our internal devices using the VPN that are specifically using the UDP port non500-isakmp, which is a keyword for UDP port 4500. When a VPN connection needs to pass through a router that translates IP addresses (NAT), standard VPN traffic (usually port 500) can get blocked or broken. To fix this, the devices "float" the traffic to UDP port 4500, which acts as a tunnel for the encrypted data to pass through the NAT device safely</em></p>
              <p><em>- Our currenty crypto map configuration.</em></p>
              <p><em>- Our currenty crypto map configuration.</em></p>
              <p><em>- Our currenty crypto map configuration.</em></p>
