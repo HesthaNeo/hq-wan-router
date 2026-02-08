@@ -95,7 +95,7 @@
         <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
             <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring ISAMKP policy.</p>
-                <img width="870" height="432" alt="Screenshot 2026-02-08 130035" src="https://github.com/user-attachments/assets/8b792b4a-e833-4140-8de3-1956d1698130" />
+                <img width="868" height="307" alt="Screenshot 2026-02-08 153207" src="https://github.com/user-attachments/assets/fe071df0-5fd0-4b8c-8d84-12711020c600" />
             <p><em>- We use the command "crypto isakmp policy 10" to tell the router to create a new, prioritized set of security rules (a "policy") for negotiating a VPN connection. "crypto isakmp" tells the router to manage the security of a VPN connection, "policy" starts a configuration block to define how the routers will identify each other and secure their initial conversation, and "10" is the priority number.</em></p>
             <p><em>- "encr aes" is telling the router to use the AES algorithm to encrypt data.</em></p>
             <p><em>- "authentication pre-share" is telling the router to use a "secret handshake" to verify who it is talking to. It ensures that only devices knowing the exact same "shared secret" (password) can establish a secure connection, and by entering the command "group 2", we are telling the devices to which mathematical "strength" to use when creating their encryption keys. Group 2 is "1024-bit" strenght. Not the strongest, but for this lap purpose we will be using this.</em></p>
