@@ -96,12 +96,11 @@
             <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring ISAMKP policy.</p>
                 <img width="870" height="432" alt="Screenshot 2026-02-08 130035" src="https://github.com/user-attachments/assets/8b792b4a-e833-4140-8de3-1956d1698130" />
-            <p><em>- As you can see, we changed the speed of the g0/1 interface to match the speed interface with the ISP router. We also used the command "no cdp enable" to prevent sharing private network details with unauthorized parties. This will stop the router from broadcasting information such as IOS version, device type, and IP addresses to the Internet Service Provider (ISP) or attackers. We use the command "ip access-group PROTECT in" to apply the PROTECT ACL inbound that we created earlier. "inspect ip FIREWALL out applies the firewall inspection rules outbound. "ip nat outside" turns on network address translation for outbound traffic. And lasty we do a "no shut" on the interface to turn the interface in fact on.</em></p>
-            <p>- Lastly, using an ethernet cross-over cable, we'll connect HQ-INET-RTR interface G0/1 to INTERNET CLOUD Service Provider router interface Fa0/0.</p>
-                <img width="2151" height="1033" alt="Screenshot 2026-02-08 131158" src="https://github.com/user-attachments/assets/52e474be-eaea-46ae-90f7-276fe4f5276d" />
-                <img width="870" height="418" alt="Screenshot 2026-02-08 131410" src="https://github.com/user-attachments/assets/4b1d01cb-9835-4531-a43b-7405b28fc511" />
-            <p><em>- As you can see, we are able to successfully ping the internet cloud service provider router. This is possible due to the interfaces being directly connected, and ICMP traffic is being allowed.</em></p>
-                <img width="868" height="307" alt="Screenshot 2026-02-08 153207" src="https://github.com/user-attachments/assets/9de1bd3e-9c18-4546-809c-8fc4927b1987" />
+            <p><em>- We use the command "crypto isakmp policy 10" to tell the router to create a new, prioritized set of security rules (a "policy") for negotiating a VPN connection. "crypto isakmp" tells the router to manage the security of a VPN connection, "policy" starts a configuration block to define how the routers will identify each other and secure their initial conversation, and "10" is the priority number.</em></p>
+            <p><em>- "encr aes" is telling the router to use the AES algorithm to encrypt data.</em></p>
+            <p><em>- "authentication pre-share" is telling the router to use a "secret handshake" to verify who it is talking to. It ensures that only devices knowing the exact same "shared secret" (password) can establish a secure connection, and by entering the command "group 2", we are telling the devices to which mathematical "strength" to use when creating their encryption keys. Group 2 is "1024-bit" strenght. Not the strongest, but for this lap purpose we will be using this.</em></p>
+                <p>- B: Next, we will configure IPSec SA lifetime and transform set.</p>
+            
 
         
         
