@@ -84,14 +84,6 @@
             <p><em>- Our BGP verification config:</em></p>
                 <img width="2559" height="1599" alt="Screenshot 2026-02-08 152526" src="https://github.com/user-attachments/assets/0cb578e0-d2ea-48e1-913e-bc8fbc011de0" />
         <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
-            <p>- Next we will configure the inside LAN interface G0/0 as a trunk for the Management and Data Networks, and connect the interface to the Core switched infrastructure.</p>
-                <p>- A: Configure the inside LAN interface.</p>
-                <img width="871" height="709" alt="Screenshot 2026-02-07 181525" src="https://github.com/user-attachments/assets/77acffef-9166-4de3-94f9-7fbab0801481" />
-            <p><em>- As you can see, we changed the speed of the g0/0 interface to match the interface of the core switch for predictable performance. We also created sub interfaces on the port for both the data vlan and the management vlan for better traffic management.</em></p>
-                <p>- B: Connect router interface G0/0 to a switchport using a straight-through cable on HQ-CORE-SW2 that is already configured as a trunk (ie. FastEthernet0/19).</p>
-                <img width="747" height="887" alt="Screenshot 2026-02-07 182345" src="https://github.com/user-attachments/assets/f0944b22-198a-409e-a64f-ab28e90992ec" />
-                <img width="869" height="709" alt="Screenshot 2026-02-07 182703" src="https://github.com/user-attachments/assets/ca12f94f-bde6-4f7c-847a-2059ac43cfed" />
-            <p><em>- Successful pings, showing we are able to establish connectivity to both the MGMT and DATA networks.</em></p>
         <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
             <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring ISAMKP policy.</p>
