@@ -52,20 +52,20 @@
                 <img width="874" height="939" alt="Screenshot 2026-02-07 180229" src="https://github.com/user-attachments/assets/252fd020-0fd3-470d-a065-6d02df2954ff" />
                 <img width="866" height="1158" alt="Screenshot 2026-02-07 180422" src="https://github.com/user-attachments/assets/b1d7090a-d18b-4744-8603-26d0e7dbaeaa" />
             <p><em>- After reloading the router, you can see that the securityk9 licensing software was installed successfully.</em></p>
-        <h3>Step 4: Configure Inbound Internet Access-List</h3>
+        <h3>Step 4: Configure and Connect HQ LAN Interface G0/0</h3>
             <p>- Next we will configure an access control list that will be applied to protect the internet facing interface.</p>
                 <img width="866" height="261" alt="Screenshot 2026-02-07 185411" src="https://github.com/user-attachments/assets/a4186eb3-0afb-42f2-b84a-a27f474a7b4e" />
-        <h3>Step 5: Configure NAT</h3>
+        <h3>Step 5: Configure and Connect Private WAN Interface G0/1</h3>
             <p>- Next we will configure an access control list for translating all data and management networks, and also the HQ guest network.</p>
                 <img width="868" height="272" alt="Screenshot 2026-02-07 185904" src="https://github.com/user-attachments/assets/ea041f79-6b51-4cc8-967f-cd8b1b539e63" />
             <p>- Next we will configure NAT for "INSIDE" ACL with Overload to interface G0/1.</p>
                 <img width="872" height="179" alt="Screenshot 2026-02-07 190203" src="https://github.com/user-attachments/assets/ef5afac0-4946-44e9-a52e-97e71c00a86e" />
             <p><em>- We use the overload command to allow devices in our private internal network to access the internet simultaneously using a single public IP address assigned to our router's g0/1 OUTSIDE interface.</em></p>
-        <h3>Step 6: Configure IOS Firewall Inspection Rules</h3>
+        <h3>Step 6: Configure Private WAN Border Gateway Protocol (BGP) Peering</h3>
             <p>- Next we will configure IOS firewall inspection rules for allowed internet traffic.</p>
                 <img width="872" height="307" alt="Screenshot 2026-02-08 124931" src="https://github.com/user-attachments/assets/87eb1138-ead1-4908-ab09-9cb65c99f21e" />
             <p><em>- We do this to enable stateful packect inspection allowing authorized outgoing traffic while automatically opening temporary, secure return paths for legitimate replies. This prevents unauthorized incoming traffic (hackers) while allowing internal users to access internet services as expected. Unlike standard Access Control Lists (ACLs) that require manual rules for both directions, the command "inspect" remembers outgoing requests and allows only the matching return packets back in. It verifies that incoming traffic is actually a reply to a request made from inside, rather than unsolicited malicious traffic. It understands and monitors application-layer details for TCP, UDP, ICMP, and HTTP, ensuring the session follows correct protocol behavior. It dynamically creates temporary openings in the firewall for allowed sessions, closing them immediately when the conversation ends.</em></p>
-        <h3>Step 7: Configure and Connect Inside LAN Interface G0/0</h3>
+        <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
             <p>- Next we will configure the inside LAN interface G0/0 as a trunk for the Management and Data Networks, and connect the interface to the Core switched infrastructure.</p>
                 <p>- A: Configure the inside LAN interface.</p>
                 <img width="871" height="709" alt="Screenshot 2026-02-07 181525" src="https://github.com/user-attachments/assets/77acffef-9166-4de3-94f9-7fbab0801481" />
@@ -74,7 +74,7 @@
                 <img width="747" height="887" alt="Screenshot 2026-02-07 182345" src="https://github.com/user-attachments/assets/f0944b22-198a-409e-a64f-ab28e90992ec" />
                 <img width="869" height="709" alt="Screenshot 2026-02-07 182703" src="https://github.com/user-attachments/assets/ca12f94f-bde6-4f7c-847a-2059ac43cfed" />
             <p><em>- Successful pings, showing we are able to establish connectivity to both the MGMT and DATA networks.</em></p>
-        <h3>Step 8: Configure and Connect Outside Internet Interface G0/1</h3>
+        <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
             <p>- Next, we will configure the internet facing interface.</p>
                 <img width="870" height="432" alt="Screenshot 2026-02-08 130035" src="https://github.com/user-attachments/assets/8b792b4a-e833-4140-8de3-1956d1698130" />
             <p><em>- As you can see, we changed the speed of the g0/1 interface to match the speed interface with the ISP router. We also used the command "no cdp enable" to prevent sharing private network details with unauthorized parties. This will stop the router from broadcasting information such as IOS version, device type, and IP addresses to the Internet Service Provider (ISP) or attackers. We use the command "ip access-group PROTECT in" to apply the PROTECT ACL inbound that we created earlier. "inspect ip FIREWALL out applies the firewall inspection rules outbound. "ip nat outside" turns on network address translation for outbound traffic. And lasty we do a "no shut" on the interface to turn the interface in fact on.</em></p>
@@ -82,7 +82,7 @@
                 <img width="2151" height="1033" alt="Screenshot 2026-02-08 131158" src="https://github.com/user-attachments/assets/52e474be-eaea-46ae-90f7-276fe4f5276d" />
                 <img width="870" height="418" alt="Screenshot 2026-02-08 131410" src="https://github.com/user-attachments/assets/4b1d01cb-9835-4531-a43b-7405b28fc511" />
             <p><em>- As you can see, we are able to successfully ping the internet cloud service provider router. This is possible due to the interfaces being directly connected, and ICMP traffic is being allowed.</em></p>
-        <h3>Step 9: Configure Static Routes</h3>
+        <h3>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
             <p>- For this last step, we will add static routes that tell the router how to get to the guest network and our future branches.</p>
                 <p>- A: First we will configure the default route and test IP connectivity to the Google Server 8.8.8.8.</p>
                 <img width="872" height="452" alt="Screenshot 2026-02-08 132022" src="https://github.com/user-attachments/assets/60ced046-a881-4512-b202-bc8339eba2d5" />
@@ -98,6 +98,8 @@
             <p><em>- ip route 192.168.130.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
             <p><em>- ip route 192.168.30.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
             <p><em>- ip route 10.10.30.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
+        <h3>Step 10: Configure and connect Internet interface G0/2</h3>
+        <h3>Step 11: Configure Static Routes</h3>
 
 
 
