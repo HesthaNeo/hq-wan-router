@@ -106,6 +106,8 @@
              <p><em>- "ipsec-isakmp" Specifies that this rule will use IKE (Internet Key Exchange/ISAKMP) to automatically negotiate security keys and IPsec to encrypt the data packets.</em></p>
              <p><em>- "set pfs group2" enables Perfect Forward Secrecy (PFS) which will force the routers to generate a brand-new, independent key for every single session. Normally, a VPN uses one "master" key (from Phase 1) to help create the keys that actually encrypt your data. If someone were to steal that master key, they could theoretically decrypt all our past and future traffic. This an extra insurance policy. Again "group2" is the encryption strength algorithim. </em></p>
              <p><em>- We use "set security-association lifetime seconds 86400" to set an expiration date for the VPN’s encryption keys. In this case, it is 24 hours. Once that time is up, the routers will throw them away and negotiate brand-new ones.</em></p>
+             <p><em>- "set transform-set BRANCH-2" specifies we will be using the rule set we create for the crypto map titled "BRANCH-2".</em></p>
+             <p><em>- With the command "match address BRANCH-2-TRAFFIC" we essentially telling the router to identify and group specific network traffic that matches the rules defined in our access list named "BRANCH-2-TRAFFIC".</em></p>
              
 
 
