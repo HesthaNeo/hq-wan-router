@@ -70,7 +70,7 @@
             <p><em>- As you can see, we are able to successfully ping the private WAN cloud router.</em></p>       
         <h3>Step 6: Configure Private WAN Border Gateway Protocol (BGP) Peering</h3>
             <p>- Next we will configure the BGP router ID and set up peering with the provider router.</p>
-                <img width="872" height="307" alt="Screenshot 2026-02-08 124931" src="https://github.com/user-attachments/assets/87eb1138-ead1-4908-ab09-9cb65c99f21e" />
+                <img width="871" height="244" alt="Screenshot 2026-02-08 180121" src="https://github.com/user-attachments/assets/fbeda697-9903-4118-9b78-93b1b48dd3e2" />
             <p><em>- Command "router bgp 65123" enters the BGP configuration for autonomous system #65123. The "bgp router-id" command will force the router to use g0/1 IP as the BGP ID. The command "neighbor 192.168.250.1 remote-as 65535" effectively configures BGP peering.</em></p>
             <p>- Next we will configure the following network statements to advertise across the Private WAN.</p>
                 <img width="870" height="462" alt="Screenshot 2026-02-08 151942" src="https://github.com/user-attachments/assets/f65b0a0f-dd72-4117-baf6-c436f371babb" />
