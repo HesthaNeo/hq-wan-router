@@ -110,22 +110,8 @@
              <p><em>- With the command "match address BRANCH-2-TRAFFIC" we essentially telling the router to identify and group specific network traffic that matches the rules defined in our access list named "BRANCH-2-TRAFFIC".</em></p>
                  <img width="870" height="397" alt="Screenshot 2026-02-08 182833" src="https://github.com/user-attachments/assets/f4443d94-462e-4a75-ad76-50f057039e25" />
              <p><em>- Our currenty crypto map configuration.</em></p>
-
-             
-
-
-
-            
-
-        
-        
-        
-        
-        
         <h3>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
-            <p>- For this last step, we will add static routes that tell the router how to get to the guest network and our future branches.</p>
-                <p>- A: First we will configure the default route and test IP connectivity to the Google Server 8.8.8.8.</p>
-                <img width="872" height="452" alt="Screenshot 2026-02-08 132022" src="https://github.com/user-attachments/assets/60ced046-a881-4512-b202-bc8339eba2d5" />
+            <p>- For this step, we will configure an Access Control List that only allows traffic from the Branch 2 IPSec VPN tunnel.</p>
             <p><em>- The router now has a Default Route for unknown destinations (0.0.0.0 0.0.0.0).</em></p>
                 <p>- B: Now last, we will add all static routes.</p>
                 <img width="868" height="1068" alt="Screenshot 2026-02-08 132833" src="https://github.com/user-attachments/assets/d78b3025-2604-4972-9039-a4a9a79b836f" />
