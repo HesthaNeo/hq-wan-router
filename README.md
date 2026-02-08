@@ -72,6 +72,8 @@
             <p>- Next we will configure the BGP router ID and set up peering with the provider router.</p>
                 <img width="872" height="307" alt="Screenshot 2026-02-08 124931" src="https://github.com/user-attachments/assets/87eb1138-ead1-4908-ab09-9cb65c99f21e" />
             <p><em>- Command "router bgp 65123" enters the BGP configuration for autonomous system #65123. The "bgp router-id" command will force the router to use g0/1 IP as the BGP ID. The command "neighbor 192.168.250.1 remote-as 65535" effectively configures BGP peering.</em></p>
+            <p>- Next we will configure the following network statements to advertise across the Private WAN.</p>
+                
         <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
             <p>- Next we will configure the inside LAN interface G0/0 as a trunk for the Management and Data Networks, and connect the interface to the Core switched infrastructure.</p>
                 <p>- A: Configure the inside LAN interface.</p>
