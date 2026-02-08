@@ -74,7 +74,7 @@
             <p><em>- Command "router bgp 65123" enters the BGP configuration for autonomous system #65123. The "bgp router-id" command will force the router to use g0/1 IP as the BGP ID. The command "neighbor 192.168.250.1 remote-as 65535" effectively configures BGP peering.</em></p>
             <p>- Next we will configure the following network statements to advertise across the Private WAN.</p>
                 <img width="870" height="462" alt="Screenshot 2026-02-08 151942" src="https://github.com/user-attachments/assets/f65b0a0f-dd72-4117-baf6-c436f371babb" />
-            <p>- Break down of all network statements.</p>
+            <p>- Break down of all network statements:</p>
             <p><em>- network 192.168.110.0 mask 255.255.255.0 <b>(Advertises HQ MGMT)</b></em></p>
             <p><em>- network 192.168.10.0 mask 255.255.255.0 <b>(Advertises HQ DATA)</b></em></p>
             <p><em>- network 10.10.10.0 mask 255.255.255.0 <b>(Advertises HQ VOICE)</b></em></p>
