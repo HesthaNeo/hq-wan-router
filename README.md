@@ -66,11 +66,12 @@
             <p><em>- Using the "speed 100" command, we effectively set our speed to 100Mbps matching the ISP router interface. Command "bandwidth 50000" sets the bandwidth reference in kilobits (=50Mbps). We also want to ensure no cdp messages are sent to the provider network, so we execute "no cdp enable" command.</em></p>
             <p>- Next, using an ethernet cross-over cable connect the private WAN interface G0/1 to the PRIVATE WAN CLOUD router interface FastEthernet0/0.</p>
                 <img width="1183" height="973" alt="Screenshot 2026-02-08 145302" src="https://github.com/user-attachments/assets/fcffc9ed-34cd-4547-801e-b1d8086b47c5" />
+                <img width="868" height="433" alt="Screenshot 2026-02-08 145438" src="https://github.com/user-attachments/assets/2d17e92b-7753-44a4-8b2d-1650654cec1f" />
+            <p><em>- As you can see, we are able to successfully ping the private WAN cloud router.</em></p>
 
 
-            <p>- Next we will configure NAT for "INSIDE" ACL with Overload to interface G0/1.</p>
-                <img width="872" height="179" alt="Screenshot 2026-02-07 190203" src="https://github.com/user-attachments/assets/ef5afac0-4946-44e9-a52e-97e71c00a86e" />
-            <p><em>- We use the overload command to allow devices in our private internal network to access the internet simultaneously using a single public IP address assigned to our router's g0/1 OUTSIDE interface.</em></p>
+
+       
         <h3>Step 6: Configure Private WAN Border Gateway Protocol (BGP) Peering</h3>
             <p>- Next we will configure IOS firewall inspection rules for allowed internet traffic.</p>
                 <img width="872" height="307" alt="Screenshot 2026-02-08 124931" src="https://github.com/user-attachments/assets/87eb1138-ead1-4908-ab09-9cb65c99f21e" />
