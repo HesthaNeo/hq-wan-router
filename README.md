@@ -2,7 +2,7 @@
 <img width="699" height="234" alt="Screenshot 2026-02-08 134928" src="https://github.com/user-attachments/assets/f1c44480-4954-4a84-8a21-6ebd24784d28" />
 </p>
 <h1><u>Milestone 5: HQ WAN Router</u></h1>
-    <p>Third phase, we will install 1 CISCO2911/K9 with ipbasek9 and securityk9 licensing. This router will act as the gateway for all WAN services that connect Headquarters to Branch 1 and Branch 2. This includes a Private WAN connection to Branch 1 via the WAN service provider using BGP peering. In addition, a second internet service will be connected to this router solely for the purpose of creating an IPSec Site to Site (L2L) Virtual Private Network connection.</p>
+    <p>Fourth phase, we will install 1 CISCO2911/K9 with ipbasek9 and securityk9 licensing. This router will act as the gateway for all WAN services that connect Headquarters to Branch 1 and Branch 2. This includes a Private WAN connection to Branch 1 via the WAN service provider using BGP peering. In addition, a second internet service will be connected to this router solely for the purpose of creating an IPSec Site to Site (L2L) Virtual Private Network connection.</p>
     <h2><strong><u>Configuration Steps</u></strong></h2>
     <p><b>Step 1: Rack, Mount, and Power On The Cisco 2911 Router</b></p>
     <p><b>Step 2: Basic Switch Configurations (Hostname, NTP, Domain-Name, SSH, Etc)</b></p>
