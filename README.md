@@ -117,20 +117,10 @@
              <p><em>- "permit udp host 50.50.50.50 any eq non500-isakmp" is allowing traffic using the udp protocol to host 50.50.50.50 from any of our internal devices using the VPN that are specifically using the UDP port non500-isakmp, which is a keyword for UDP port 4500. When a VPN connection needs to pass through a router that translates IP addresses (NAT), standard VPN traffic (usually port 500) can get blocked or broken. To fix this, the devices "float" the traffic to UDP port 4500, which acts as a tunnel for the encrypted data to pass through the NAT device safely</em></p>
              <p><em>- "permit ahp host 50.50.50.50 any" essentially is telling the firewall/router to allow VPN traffic coming from the specific IP address 50.50.50.50 to go anywhere. "ahp" is for Authentication Header Protocol. This is a specific type of IPsec security protocol used to verify that data has not been tampered with</em></p>
              <p><em>- We use "permit esp host 50.50.50.50 any" to ensure that the IPsec VPN tunnel can be established and pass data without being blocked by security policies. We apply this on the outside interface of the firewall/router.</em></p>
-
-            <p><em>- The router now has a Default Route for unknown destinations (0.0.0.0 0.0.0.0).</em></p>
-                <p>- B: Now last, we will add all static routes.</p>
-                <img width="868" height="1068" alt="Screenshot 2026-02-08 132833" src="https://github.com/user-attachments/assets/d78b3025-2604-4972-9039-a4a9a79b836f" />
-            <p>- Break down of all  our current static routes.</p>
-            <p><em>- ip route 172.16.10.0 255.255.255.0 192.168.10.100 <b>(HQ Guest to HQ-Core-SW)</b></em></p>
-            <p><em>- ip route 10.10.10.0 255.255.255.0 192.168.10.100 <b>(HQ Voice to HQ-Core-SW)</b></em></p>
-            <p><em>- ip route 192.168.120.0 255.255.255.0 192.168.10.254 <b>(Branch 1 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 192.168.20.0 255.255.255.0 192.168.10.254 <b>(Branch 1 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 10.10.20.0 255.255.255.0 192.168.10.254 <b>(Branch 1 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 192.168.130.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 192.168.30.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 10.10.30.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
         <h3>Step 10: Configure and connect Internet interface G0/2</h3>
+            <p>- For this step, we will configure and connect the VPN-ONLY internet connection for the site-to-site VPN to Branch 2.</p>
+                <p>- A: We will start by configuring the internet connection.</p>
+            
         <h3>Step 11: Configure Static Routes</h3>
 
 
