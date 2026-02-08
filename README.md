@@ -62,7 +62,8 @@
                 <img width="874" height="276" alt="Screenshot 2026-02-08 144551" src="https://github.com/user-attachments/assets/4acf6e07-0d13-4d12-a860-b2090fd1e128" />
         <h3>Step 5: Configure and Connect Private WAN Interface G0/1</h3>
             <p>- Next we will configure and connect the private WAN interface.</p>
-                <img width="868" height="272" alt="Screenshot 2026-02-07 185904" src="https://github.com/user-attachments/assets/ea041f79-6b51-4cc8-967f-cd8b1b539e63" />
+                <img width="874" height="403" alt="Screenshot 2026-02-08 144842" src="https://github.com/user-attachments/assets/aefbee72-12bc-4b84-9ac0-a6b825611801" />
+
             <p>- Next we will configure NAT for "INSIDE" ACL with Overload to interface G0/1.</p>
                 <img width="872" height="179" alt="Screenshot 2026-02-07 190203" src="https://github.com/user-attachments/assets/ef5afac0-4946-44e9-a52e-97e71c00a86e" />
             <p><em>- We use the overload command to allow devices in our private internal network to access the internet simultaneously using a single public IP address assigned to our router's g0/1 OUTSIDE interface.</em></p>
