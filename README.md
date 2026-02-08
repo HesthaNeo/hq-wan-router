@@ -102,7 +102,8 @@
                 <img width="872" height="697" alt="Screenshot 2026-02-08 160914" src="https://github.com/user-attachments/assets/38a4b88c-48a5-4d60-a070-cd63dfdba3c7" />
             <p><em>- The command starts the configuration of the rule that tells the router to secure traffic to branch 2 office using automatic encryption (IPsec) and automatic key management (ISAKMP). It essentially prepares the router to build an automatic, dynamic IPsec VPN tunnel for traffic going to the branch 2 office. </em></p>
              <p><em>- "crypto map BRANCH-2-MAP" essentially names the policy set "BRANCH-2-MAP". This is a container for all the rules defining the VPN to a specific location.</em></p>
-             <p><em>- "crypto map BRANCH-2-MAP" essentially names the policy set "BRANCH-2-MAP". This is a container for all the rules defining the VPN to a specific location.</em></p>
+             <p><em>- "100" sets a priority number (sequence number) for this specific rule within the map. If there are multiple rules, lower numbers are checked first.</em></p>
+             <p><em>- "ipsec-isakmp" Specifies that this rule will use IKE (Internet Key Exchange/ISAKMP) to automatically negotiate security keys and IPsec to encrypt the data packets.</em></p>
 
 
 
