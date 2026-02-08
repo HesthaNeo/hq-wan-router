@@ -104,6 +104,7 @@
              <p><em>- "crypto map BRANCH-2-MAP" essentially names the policy set "BRANCH-2-MAP". This is a container for all the rules defining the VPN to a specific location.</em></p>
              <p><em>- "100" sets a priority number (sequence number) for this specific rule within the map. If there are multiple rules, lower numbers are checked first.</em></p>
              <p><em>- "ipsec-isakmp" Specifies that this rule will use IKE (Internet Key Exchange/ISAKMP) to automatically negotiate security keys and IPsec to encrypt the data packets.</em></p>
+             <p><em>- "set pfs group2" enables Perfect Forward Secrecy (PFS) which will force the routers to generate a brand-new, independent key for every single session. Normally, a VPN uses one "master" key (from Phase 1) to help create the keys that actually encrypt your data. If someone were to steal that master key, they could theoretically decrypt all our past and future traffic. This an extra insurance policy. Again "group2" encryption strength algorithim. </em></p>
 
 
 
