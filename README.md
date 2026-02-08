@@ -108,6 +108,9 @@
              <p><em>- We use "set security-association lifetime seconds 86400" to set an expiration date for the VPN’s encryption keys. In this case, it is 24 hours. Once that time is up, the routers will throw them away and negotiate brand-new ones.</em></p>
              <p><em>- "set transform-set BRANCH-2" specifies we will be using the rule set we create for the crypto map titled "BRANCH-2".</em></p>
              <p><em>- With the command "match address BRANCH-2-TRAFFIC" we essentially telling the router to identify and group specific network traffic that matches the rules defined in our access list named "BRANCH-2-TRAFFIC".</em></p>
+                 <img width="870" height="397" alt="Screenshot 2026-02-08 182833" src="https://github.com/user-attachments/assets/f4443d94-462e-4a75-ad76-50f057039e25" />
+             <p><em>- Our currenty crypto map configuration.</em></p>
+
              
 
 
