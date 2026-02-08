@@ -100,6 +100,8 @@
             <p><em>- "encr aes" is telling the router to use the AES algorithm to encrypt data.</em></p>
             <p><em>- "authentication pre-share" is telling the router to use a "secret handshake" to verify who it is talking to. It ensures that only devices knowing the exact same "shared secret" (password) can establish a secure connection, and by entering the command "group 2", we are telling the devices to which mathematical "strength" to use when creating their encryption keys. Group 2 is "1024-bit" strenght. Not the strongest, but for this lap purpose we will be using this.</em></p>
                 <p>- B: Next, we will configure IPSec SA lifetime and transform set.</p>
+                <img width="868" height="272" alt="Screenshot 2026-02-08 155001" src="https://github.com/user-attachments/assets/285847a2-04fc-4473-9244-66de40762f1d" />
+
             
 
         
