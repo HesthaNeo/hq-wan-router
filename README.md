@@ -101,6 +101,13 @@
                 <img width="2151" height="1033" alt="Screenshot 2026-02-08 131158" src="https://github.com/user-attachments/assets/52e474be-eaea-46ae-90f7-276fe4f5276d" />
                 <img width="870" height="418" alt="Screenshot 2026-02-08 131410" src="https://github.com/user-attachments/assets/4b1d01cb-9835-4531-a43b-7405b28fc511" />
             <p><em>- As you can see, we are able to successfully ping the internet cloud service provider router. This is possible due to the interfaces being directly connected, and ICMP traffic is being allowed.</em></p>
+                <img width="868" height="307" alt="Screenshot 2026-02-08 153207" src="https://github.com/user-attachments/assets/9de1bd3e-9c18-4546-809c-8fc4927b1987" />
+
+        
+        
+        
+        
+        
         <h3>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
             <p>- For this last step, we will add static routes that tell the router how to get to the guest network and our future branches.</p>
                 <p>- A: First we will configure the default route and test IP connectivity to the Google Server 8.8.8.8.</p>
