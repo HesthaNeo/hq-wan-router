@@ -106,6 +106,8 @@
                 <p>- C: Next, we will create an Access Control List that matches any traffic going to Branch 2 networks.</p>
                 <img width="869" height="339" alt="Screenshot 2026-02-08 160339" src="https://github.com/user-attachments/assets/dcfd8194-f405-4856-99e1-05ab3f0924a4" />
                 <p>- D: Next, we will create the crypto map that will be applied to the VPN-ONLY Internet ineterface.</p>
+                <img width="872" height="697" alt="Screenshot 2026-02-08 160914" src="https://github.com/user-attachments/assets/38a4b88c-48a5-4d60-a070-cd63dfdba3c7" />
+
 
 
             
