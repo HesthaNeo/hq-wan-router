@@ -54,7 +54,7 @@
                 <img width="2559" height="1597" alt="Screenshot 2026-02-08 142112" src="https://github.com/user-attachments/assets/698d3e75-98f8-48ed-932f-6bdf07910127" />
             <p><em>- After reloading the router, you can see that the securityk9 licensing software was installed successfully.</em></p>
         <h3>Step 4: Configure and Connect HQ LAN Interface G0/0</h3>
-            <p>- Next we will configure an access control list that will be applied to protect the internet facing interface.</p>
+            <p>- Next we will configure and connect the LAN facing interface G0/0.</p>
                 <img width="866" height="261" alt="Screenshot 2026-02-07 185411" src="https://github.com/user-attachments/assets/a4186eb3-0afb-42f2-b84a-a27f474a7b4e" />
         <h3>Step 5: Configure and Connect Private WAN Interface G0/1</h3>
             <p>- Next we will configure an access control list for translating all data and management networks, and also the HQ guest network.</p>
