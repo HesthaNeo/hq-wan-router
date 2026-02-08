@@ -49,8 +49,9 @@
                 <img width="871" height="980" alt="Screenshot 2026-02-08 141447" src="https://github.com/user-attachments/assets/e1ef04ae-0ddc-40c7-9f86-1b93f42bd98c" />
         <h3>Step 3: Install Securityk9 License</h3>
             <p>- Next we will activate the security licensing 60 day grace period on the 2901 Router. We do this to unlock advanced security features, primarily for setting up VPNs (IPsec), secure communication, and enhanced firewall functionality.</p>
-                <img width="874" height="939" alt="Screenshot 2026-02-07 180229" src="https://github.com/user-attachments/assets/252fd020-0fd3-470d-a065-6d02df2954ff" />
-                <img width="866" height="1158" alt="Screenshot 2026-02-07 180422" src="https://github.com/user-attachments/assets/b1d7090a-d18b-4744-8603-26d0e7dbaeaa" />
+                <img width="2559" height="824" alt="Screenshot 2026-02-08 141925" src="https://github.com/user-attachments/assets/6e9b69d6-8d99-4f79-9fc6-761765e184b4" />
+                <img width="2559" height="1267" alt="Screenshot 2026-02-08 142031" src="https://github.com/user-attachments/assets/50124ebc-70df-4843-98bc-678e2e20c2f1" />
+                <img width="2559" height="1597" alt="Screenshot 2026-02-08 142112" src="https://github.com/user-attachments/assets/698d3e75-98f8-48ed-932f-6bdf07910127" />
             <p><em>- After reloading the router, you can see that the securityk9 licensing software was installed successfully.</em></p>
         <h3>Step 4: Configure and Connect HQ LAN Interface G0/0</h3>
             <p>- Next we will configure an access control list that will be applied to protect the internet facing interface.</p>
