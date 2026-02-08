@@ -10,21 +10,26 @@
     <p><b>Step 4: Configure and Connect HQ LAN Interface G0/0</b></p>
         <p>- A. MGMT Interface VLAN 100</p>
         <p>- B. DATA Interface VLAN 192</p>
-    <p><b>Step 5: Configure NAT</b></p>
-        <p>- A. NAT Inside Access-List</p>
-        <p>- B. NAT Overload</p>
-    <p><b>Step 6: Configure IOS Firewall Inspection Rules</b></p>
-    <p><b>Step 7: Configure and Connect Inside LAN Interface G0/0</b></p>
-        <p>- A. MGMT Interface VLAN 100</p> 
-        <p>- B. DATA Interface VLAN 192</p>
-            <p>- i. NAT Inside</p>
-    <p><b>Step 8: Configure and Connect Outside Internet Interface G0/1</b></p>
+    <p><b>Step 5: Configure and Connect Private WAN Interface G0/1</b></p>
         <p>- A. IP Address</p>
         <p>- B. Disable CDP</p>
-        <p>- C. Apply Inbound Access-List</p>
-        <p>- D. Apply IOS Firewall Outbound</p>
-        <p>- E. NAT Outside</p>
-    <p><b>Step 9: Configure Static Routes</b></p>
+    <p><b>Step 6: Configure Private WAN Border Gateway Protocol (BGP) Peering</b></p>
+        <p>- A. BGP ASN 65123</p>
+            <p>- i. Router ID</p>
+            <p>- ii. Neighbor</p>
+            <p>- iii. Networks</p>
+    <p><b>Step 7: Configure Private WAN Voice Quality of Service</b></p>
+        <p>- A. VOIP Control and RTP Access-Lists</p> 
+        <p>- B. VOIP Control and RTP Class-Maps</p>
+        <p>- C. Policy-Map</p>
+        <p>- D. Apply Policy-Map to Private WAN Interface G0/1</p>
+    <p><b>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</b></p>
+        <p>- A. Branch 2 Traffic Access List</p>
+        <p>- B. Isakmp Policy</p>
+        <p>- C. Isakmp Key</p>
+        <p>- D. Ipsec SA Lifetime and Transform-Set</p>
+        <p>- E. Ipsec-Isakmp Crypto Map</p>
+    <p><b>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</b></p>
         <p>- A. Default Route Pointing to Internet Gateway Public IP</p>
         <p>- B. Routes to Branch 1 Networks and Branch 2 Networks Pointing to HQ WAN Router IP Address</p>
         <p>- C. Route to Guest Network Pointing to HQ Core Switch Data Network HSRP Address</p>
