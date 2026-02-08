@@ -105,6 +105,7 @@
             <p><em>- The command "crypto ipsec transform-set BRANCH-2 esp-aes esp-sha-hmac" creates a security policy named "BRANCH-2" that encrypts traffic using AES and verifies data integrity using SHA-HMAC [1, 3]. "crypto ipsec transform-set" essentially defines a transform set, which is a named combination of security protocols and algorithms that protect data in an IPsec VPN tunnel. "BRANCH-2" is the name of this specific transform set. "esp-aes" specifies that Encapsulating Security Payload (ESP) will be used for encryption to ensure data confidentiality using the AES (Advanced Encryption Standard) algorithm. "esp-sha-hmac" specifies that ESP will be used for authentication to ensure data integrity using the SHA (Secure Hash Algorithm) HMAC.</em></p>
                 <p>- C: Next, we will create an Access Control List that matches any traffic going to Branch 2 networks.</p>
                 <img width="869" height="339" alt="Screenshot 2026-02-08 160339" src="https://github.com/user-attachments/assets/dcfd8194-f405-4856-99e1-05ab3f0924a4" />
+                <p>- D: Next, we will create the crypto map that will be applied to the VPN-ONLY Internet ineterface.</p>
 
 
             
