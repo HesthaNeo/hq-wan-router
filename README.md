@@ -67,15 +67,11 @@
             <p>- Next, using an ethernet cross-over cable, we'll connect the private WAN interface G0/1 to the PRIVATE WAN CLOUD router interface FastEthernet0/0.</p>
                 <img width="1183" height="973" alt="Screenshot 2026-02-08 145302" src="https://github.com/user-attachments/assets/fcffc9ed-34cd-4547-801e-b1d8086b47c5" />
                 <img width="868" height="433" alt="Screenshot 2026-02-08 145438" src="https://github.com/user-attachments/assets/2d17e92b-7753-44a4-8b2d-1650654cec1f" />
-            <p><em>- As you can see, we are able to successfully ping the private WAN cloud router.</em></p>
-
-
-
-       
+            <p><em>- As you can see, we are able to successfully ping the private WAN cloud router.</em></p>       
         <h3>Step 6: Configure Private WAN Border Gateway Protocol (BGP) Peering</h3>
-            <p>- Next we will configure IOS firewall inspection rules for allowed internet traffic.</p>
+            <p>- Next we will configure the BGP router ID and set up peering with the provider router.</p>
                 <img width="872" height="307" alt="Screenshot 2026-02-08 124931" src="https://github.com/user-attachments/assets/87eb1138-ead1-4908-ab09-9cb65c99f21e" />
-            <p><em>- We do this to enable stateful packect inspection allowing authorized outgoing traffic while automatically opening temporary, secure return paths for legitimate replies. This prevents unauthorized incoming traffic (hackers) while allowing internal users to access internet services as expected. Unlike standard Access Control Lists (ACLs) that require manual rules for both directions, the command "inspect" remembers outgoing requests and allows only the matching return packets back in. It verifies that incoming traffic is actually a reply to a request made from inside, rather than unsolicited malicious traffic. It understands and monitors application-layer details for TCP, UDP, ICMP, and HTTP, ensuring the session follows correct protocol behavior. It dynamically creates temporary openings in the firewall for allowed sessions, closing them immediately when the conversation ends.</em></p>
+            <p><em>- Command "router bgp 65123" enters the BGP configuration for autonomous system #65123. The "bgp router-id" command will force the router to use g0/1 IP as the BGP ID. The command "neighbor 192.168.250.1 remote-as 65535" effectively configures BGP peering.</em></p>
         <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
             <p>- Next we will configure the inside LAN interface G0/0 as a trunk for the Management and Data Networks, and connect the interface to the Core switched infrastructure.</p>
                 <p>- A: Configure the inside LAN interface.</p>
