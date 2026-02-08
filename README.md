@@ -113,6 +113,11 @@
         <h3>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
             <p>- For this step, we will configure an Access Control List that only allows traffic from the Branch 2 IPSec VPN tunnel.</p>
                  <img width="869" height="327" alt="Screenshot 2026-02-08 183232" src="https://github.com/user-attachments/assets/0e774fb4-53e8-4e2c-9648-653f806caf53" />
+             <p><em>- "permit udp host 50.50.50.50 any eq isakmp" is essentially allowing traffic using the udp protocol to host 50.50.50.50 from any of our internal devices using the VPN that are specifically using the UDP port 500, which is the standard port for negotiating VPN security keys.</em></p>
+             <p><em>- Our currenty crypto map configuration.</em></p>
+             <p><em>- Our currenty crypto map configuration.</em></p>
+             <p><em>- Our currenty crypto map configuration.</em></p>
+             <p><em>- Our currenty crypto map configuration.</em></p>
 
             <p><em>- The router now has a Default Route for unknown destinations (0.0.0.0 0.0.0.0).</em></p>
                 <p>- B: Now last, we will add all static routes.</p>
