@@ -30,9 +30,16 @@
         <p>- D. Ipsec SA Lifetime and Transform-Set</p>
         <p>- E. Ipsec-Isakmp Crypto Map</p>
     <p><b>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</b></p>
-        <p>- A. Default Route Pointing to Internet Gateway Public IP</p>
-        <p>- B. Routes to Branch 1 Networks and Branch 2 Networks Pointing to HQ WAN Router IP Address</p>
-        <p>- C. Route to Guest Network Pointing to HQ Core Switch Data Network HSRP Address</p>
+    <p><b>Step 10: Configure and connect Internet interface G0/2</b></p>
+        <p>- A. IP Address</p>
+        <p>- B. Disable CDP</p>
+        <p>- C. Apply VPN Only Access-List Inbound</p>
+        <p>- D. Apply VPN Crypto Map for Branch 2 VPN</p>
+    <p><b>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</b></p>
+        <p>- A. Branch 2 Traffic Access List</p>
+        <p>- B. Isakmp Policy</p>
+        <p>- C. Isakmp Key</p>
+        <p>- D. Ipsec SA Lifetime and Transform-Set</p>
     <h2><strong><u>Implementation</u></strong></h2>
         <h3>Step 1: Rack, Mount, and Power On The Cisco 2911 Router</h3>
             <p>- First, we'll Add a 2901 Router to the topology by dragging and dropping it into the Headquarters section of the lab. We'll place the 2901 Router in the top right area of HQ and label it as “HQ-INET-RTR”.</p>
