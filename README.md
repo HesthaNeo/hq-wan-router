@@ -83,7 +83,7 @@
             <p><em>- network 10.10.30.0 mask 255.255.255.0 <b>(Advertises B2 VOICE)</b></em></p>
             <p><em>- Our BGP verification config:</em></p>
                 <img width="2559" height="1599" alt="Screenshot 2026-02-08 152526" src="https://github.com/user-attachments/assets/0cb578e0-d2ea-48e1-913e-bc8fbc011de0" />
-        <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>
+        <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>https://github.com/HesthaNeo/hq-wan-router/blob/main/README.md
         <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
             <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring ISAMKP policy.</p>
@@ -100,6 +100,7 @@
                 <img width="869" height="339" alt="Screenshot 2026-02-08 160339" src="https://github.com/user-attachments/assets/dcfd8194-f405-4856-99e1-05ab3f0924a4" />
                 <p>- D: Next, we will create the crypto map that will be applied to the VPN-ONLY Internet ineterface.</p>
                 <img width="872" height="697" alt="Screenshot 2026-02-08 160914" src="https://github.com/user-attachments/assets/38a4b88c-48a5-4d60-a070-cd63dfdba3c7" />
+            <p><em>- The command starts the configuration of the rule that tells the router to secure traffic to branch 2 office using automatic encryption (IPsec) and automatic key management (ISAKMP). It essentially prepares the router to build an automatic, dynamic IPsec VPN tunnel for traffic going to the branch 2 office. </em></p>
 
 
 
