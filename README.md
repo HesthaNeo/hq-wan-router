@@ -35,8 +35,8 @@
         <p>- B. Disable CDP</p>
         <p>- C. Apply VPN Only Access-List Inbound</p>
         <p>- D. Apply VPN Crypto Map for Branch 2 VPN</p>
-    <p><b>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</b></p>
-        <p>- A. Branch 2 Traffic Access List</p>
+    <p><b>Step 11: Configure Static Routes</b></p>
+        <p>- A. Default Route Pointing to HQ Internet Router DATA Interface IP Address</p>
         <p>- B. Isakmp Policy</p>
         <p>- C. Isakmp Key</p>
         <p>- D. Ipsec SA Lifetime and Transform-Set</p>
