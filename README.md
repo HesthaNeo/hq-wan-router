@@ -120,7 +120,7 @@
         <h3>Step 10: Configure and connect Internet interface G0/2</h3>
             <p>- For this step, we will configure and connect the VPN-ONLY internet connection for the site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring the internet connection.</p>
-                    <img width="871" height="619" alt="Screenshot 2026-02-08 185635" src="https://github.com/user-attachments/assets/1280d3fb-9d30-470b-b3ce-e4fd040fd778" />
+                 <img width="871" height="619" alt="Screenshot 2026-02-08 185635" src="https://github.com/user-attachments/assets/1280d3fb-9d30-470b-b3ce-e4fd040fd778" />
 
             
         <h3>Step 11: Configure Static Routes</h3>
