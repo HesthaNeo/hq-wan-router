@@ -129,6 +129,8 @@
              <p><em>- We use command "no ip access-group VPN-ONLY in" to temporarily allow test pings back in. As you can we were able to successfully connect to the ISP router. We do command "ip access-group VPN-ONLY in" to reapply the access list allowing only VPN and save our current configuration.</em></p>            
         <h3>Step 11: Configure Static Routes</h3>
             <p>- For this last step, we will add static routes for the default route, VPN endpoint, Branch 2 traffic, and HQ voice network.</p>
+                <img width="869" height="1033" alt="Screenshot 2026-02-08 191526" src="https://github.com/user-attachments/assets/1fba025e-2601-4078-985f-c88867f9acf5" />
+
 
 
 
