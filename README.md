@@ -18,11 +18,6 @@
             <p>- i. Router ID</p>
             <p>- ii. Neighbor</p>
             <p>- iii. Networks</p>
-    <p><b>Step 7: Configure Private WAN Voice Quality of Service</b></p>
-        <p>- A. VOIP Control and RTP Access-Lists</p> 
-        <p>- B. VOIP Control and RTP Class-Maps</p>
-        <p>- C. Policy-Map</p>
-        <p>- D. Apply Policy-Map to Private WAN Interface G0/1</p>
     <p><b>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</b></p>
         <p>- A. Branch 2 Traffic Access List</p>
         <p>- B. Isakmp Policy</p>
@@ -83,7 +78,6 @@
             <p><em>- network 10.10.30.0 mask 255.255.255.0 <b>(Advertises B2 VOICE)</b></em></p>
             <p><em>- Our BGP verification config:</em></p>
                 <img width="2559" height="1599" alt="Screenshot 2026-02-08 152526" src="https://github.com/user-attachments/assets/0cb578e0-d2ea-48e1-913e-bc8fbc011de0" />
-        <h3>Step 7: Configure Private WAN Voice Quality of Service</h3>https://github.com/HesthaNeo/hq-wan-router/blob/main/README.md
         <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
             <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring ISAMKP policy.</p>
