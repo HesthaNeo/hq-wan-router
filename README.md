@@ -134,11 +134,9 @@
             <p><em>- ip route 0.0.0.0 0.0.0.0 192.168.10.253 <b>(Default Route to HQ-INET-RTR)</b></em></p>
             <p><em>- ip route 50.50.50.50 255.255.255.255 218.105.21.21 <b>(VPN endpoint to ISP Gateway)</b></em></p>
             <p><em>- ip route 192.168.130.0 255.255.255.0 50.50.50.50 <b>(Branch 2 to VPN endpoint)</b></em></p>
-            <p><em>- ip route 192.168.20.0 255.255.255.0 192.168.10.254 <b>(Branch 1 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 10.10.20.0 255.255.255.0 192.168.10.254 <b>(Branch 1 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 192.168.130.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 192.168.30.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
-            <p><em>- ip route 10.10.30.0 255.255.255.0 192.168.10.254 <b>(Branch 2 to HQ-WAN-RTR)</b></em></p>
+            <p><em>- ip route 192.168.30.0 255.255.255.0 50.50.50.50 <b>(Branch 2 to VPN endpoint)</b></em></p>
+            <p><em>- ip route 10.10.30.0 255.255.255.0 50.50.50.50 <b>(Branch 2 to VPN endpoint)</b></em></p>
+            <p><em>- ip route 10.10.10.0 255.255.255.0 192.168.10.100 <b>(HQ VOICE to HQ Core Switch)</b></em></p>
 
 
 
