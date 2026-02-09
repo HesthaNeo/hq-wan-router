@@ -18,19 +18,19 @@
             <p>- i. Router ID</p>
             <p>- ii. Neighbor</p>
             <p>- iii. Networks</p>
-    <p><b>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</b></p>
+    <p><b>Step 7: Configure IPSec/Isakmp VPN Policy and Cryptography</b></p>
         <p>- A. Branch 2 Traffic Access List</p>
         <p>- B. Isakmp Policy</p>
         <p>- C. Isakmp Key</p>
         <p>- D. Ipsec SA Lifetime and Transform-Set</p>
         <p>- E. Ipsec-Isakmp Crypto Map</p>
-    <p><b>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</b></p>
-    <p><b>Step 10: Configure and connect Internet interface G0/2</b></p>
+    <p><b>Step 8: Configure Access-List to Allow Only VPN Traffic From Branch 2</b></p>
+    <p><b>Step 9: Configure and connect Internet interface G0/2</b></p>
         <p>- A. IP Address</p>
         <p>- B. Disable CDP</p>
         <p>- C. Apply VPN Only Access-List Inbound</p>
         <p>- D. Apply VPN Crypto Map for Branch 2 VPN</p>
-    <p><b>Step 11: Configure Static Routes</b></p>
+    <p><b>Step 10: Configure Static Routes</b></p>
         <p>- A. Default Route Pointing to HQ Internet Router DATA Interface IP Address</p>
         <p>- B. Route to HQ Voice Network Pointing to HQ Core Switch Voice Network HSRP Address</p>
         <p>- C. Route to Branch 2 Public IP Address via Internet Gateway Public IP</p>
@@ -78,7 +78,7 @@
             <p><em>- network 10.10.30.0 mask 255.255.255.0 <b>(Advertises B2 VOICE)</b></em></p>
             <p><em>- Our BGP verification config:</em></p>
                 <img width="2559" height="1599" alt="Screenshot 2026-02-08 152526" src="https://github.com/user-attachments/assets/0cb578e0-d2ea-48e1-913e-bc8fbc011de0" />
-        <h3>Step 8: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
+        <h3>Step 7: Configure IPSec/Isakmp VPN Policy and Cryptography</h3>
             <p>- Next, we will set up VPN policy and crypto map for IPSec site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring ISAMKP policy.</p>
                 <img width="868" height="307" alt="Screenshot 2026-02-08 153207" src="https://github.com/user-attachments/assets/fe071df0-5fd0-4b8c-8d84-12711020c600" />
@@ -104,14 +104,14 @@
              <p><em>- With the command "match address BRANCH-2-TRAFFIC" we essentially telling the router to identify and group specific network traffic that matches the rules defined in our access list named "BRANCH-2-TRAFFIC".</em></p>
                  <img width="870" height="397" alt="Screenshot 2026-02-08 182833" src="https://github.com/user-attachments/assets/f4443d94-462e-4a75-ad76-50f057039e25" />
              <p><em>- Our currenty crypto map configuration.</em></p>
-        <h3>Step 9: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
+        <h3>Step 8: Configure Access-List to Allow Only VPN Traffic From Branch 2</h3>
             <p>- For this step, we will configure an Access Control List that only allows traffic from the Branch 2 IPSec VPN tunnel.</p>
                  <img width="869" height="327" alt="Screenshot 2026-02-08 183232" src="https://github.com/user-attachments/assets/0e774fb4-53e8-4e2c-9648-653f806caf53" />
              <p><em>- "permit udp host 50.50.50.50 any eq isakmp" is essentially allowing traffic using the udp protocol to host 50.50.50.50 from any of our internal devices using the VPN that are specifically using the UDP port 500, which is the standard port for negotiating VPN security keys.</em></p>
              <p><em>- "permit udp host 50.50.50.50 any eq non500-isakmp" is allowing traffic using the udp protocol to host 50.50.50.50 from any of our internal devices using the VPN that are specifically using the UDP port non500-isakmp, which is a keyword for UDP port 4500. When a VPN connection needs to pass through a router that translates IP addresses (NAT), standard VPN traffic (usually port 500) can get blocked or broken. To fix this, the devices "float" the traffic to UDP port 4500, which acts as a tunnel for the encrypted data to pass through the NAT device safely</em></p>
              <p><em>- "permit ahp host 50.50.50.50 any" essentially is telling the firewall/router to allow VPN traffic coming from the specific IP address 50.50.50.50 to go anywhere. "ahp" is for Authentication Header Protocol. This is a specific type of IPsec security protocol used to verify that data has not been tampered with</em></p>
              <p><em>- We use "permit esp host 50.50.50.50 any" to ensure that the IPsec VPN tunnel can be established and pass data without being blocked by security policies. We apply this on the outside interface of the firewall/router.</em></p>
-        <h3>Step 10: Configure and connect Internet interface G0/2</h3>
+        <h3>Step 9: Configure and connect Internet interface G0/2</h3>
             <p>- For this step, we will configure and connect the VPN-ONLY internet connection for the site-to-site VPN to Branch 2.</p>
                 <p>- A: We will start by configuring the internet connection.</p>
                  <img width="871" height="619" alt="Screenshot 2026-02-08 185635" src="https://github.com/user-attachments/assets/1280d3fb-9d30-470b-b3ce-e4fd040fd778" />
@@ -121,7 +121,7 @@
                  <img width="1181" height="988" alt="Screenshot 2026-02-08 190254" src="https://github.com/user-attachments/assets/0a32858d-c770-423f-83eb-7560f70867ed" />
                  <img width="872" height="433" alt="Screenshot 2026-02-08 190949" src="https://github.com/user-attachments/assets/1cf5e2a5-2f20-4a62-bb5d-1f6526240eb5" />
              <p><em>- We use command "no ip access-group VPN-ONLY in" to temporarily allow test pings back in. As you can we were able to successfully connect to the ISP router. We do command "ip access-group VPN-ONLY in" to reapply the access list allowing only VPN and save our current configuration.</em></p>            
-        <h3>Step 11: Configure Static Routes</h3>
+        <h3>Step 10: Configure Static Routes</h3>
             <p>- For this last step, we will add static routes for the default route, VPN endpoint, Branch 2 traffic, and HQ voice network.</p>
                 <img width="869" height="1033" alt="Screenshot 2026-02-08 191526" src="https://github.com/user-attachments/assets/1fba025e-2601-4078-985f-c88867f9acf5" />
             <p>- Break down of all  our current static routes.</p>
