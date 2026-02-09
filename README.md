@@ -126,12 +126,9 @@
                 <p>- B: Lastly, we will connect the interface to the Internet Provider router and test connectivity. Using an ethernet cross-over cable, we'll connect the VPN-ONLY Internet interface G0/2 to the INTERNET CLOUD router interface FastEthernet1/0.</p>
                  <img width="1181" height="988" alt="Screenshot 2026-02-08 190254" src="https://github.com/user-attachments/assets/0a32858d-c770-423f-83eb-7560f70867ed" />
                  <img width="872" height="433" alt="Screenshot 2026-02-08 190949" src="https://github.com/user-attachments/assets/1cf5e2a5-2f20-4a62-bb5d-1f6526240eb5" />
-             <p><em>- We use command "no ip access-group VPN-ONLY in" to temporarily allow test pings back in. As you can we were able to successfully connect to the ISP router. We do command "ip access-group VPN-ONLY in" to reapply the access list allowing only VPN and save our current configuration.</em></p>
-
-
-
-            
+             <p><em>- We use command "no ip access-group VPN-ONLY in" to temporarily allow test pings back in. As you can we were able to successfully connect to the ISP router. We do command "ip access-group VPN-ONLY in" to reapply the access list allowing only VPN and save our current configuration.</em></p>            
         <h3>Step 11: Configure Static Routes</h3>
+            <p>- For this last step, we will add static routes for the default route, VPN endpoint, Branch 2 traffic, and HQ voice network.</p>
 
 
 
