@@ -124,6 +124,8 @@
              <p><em>- We use command "ip access-group VPN-ONLY in" to restrict access to only the Branch 2 VPN.</em></p>
              <p><em>- We use command "crypto map BRANCH-2-MAP" to apply the crypto map for encrypting traffic.</em></p>
                 <p>- B: Lastly, we will connect the interface to the Internet Provider router and test connectivity. Using an ethernet cross-over cable, we'll connect the VPN-ONLY Internet interface G0/2 to the INTERNET CLOUD router interface FastEthernet1/0.</p>
+                 <img width="1181" height="988" alt="Screenshot 2026-02-08 190254" src="https://github.com/user-attachments/assets/0a32858d-c770-423f-83eb-7560f70867ed" />
+
 
             
         <h3>Step 11: Configure Static Routes</h3>
